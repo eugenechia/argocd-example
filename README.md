@@ -1,1 +1,1 @@
-This is the demo for ArgoCD, using deployment.yaml and service.yaml
+These are the demo files used for ArgoCD
