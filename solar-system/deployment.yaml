@@ -1,19 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  labels:
+    app: solar-system
+    name: solar-system
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      app: myapp
-  replicas: 2
+      app: solar-system
+  strategy: {}
   template:
     metadata:
       labels:
-        app: myapp
+        app: solar-system
     spec:
       containers:
-      - name: myapp
-        image: nanajanashia/argocd-app:1.2
+      - image: siddharth67/solar-system:v3
+        name: solar-system
+        imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 80
