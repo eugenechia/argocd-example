@@ -16,7 +16,7 @@ spec:
         app: solar-system
     spec:
       containers:
-      - image: eugenechia/solar-system:v1
+      - image: eugenechia/solar-system:v2
         name: solar-system
         imagePullPolicy: Always
         ports:
